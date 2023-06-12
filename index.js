@@ -1,5 +1,5 @@
 const TelegramBot = require('node-telegram-bot-api');
-const bot = new TelegramBot('6105582120:AAEsi9Wj7MhlFhUMH6oSeLhfNQf_uPF5K7M', { polling: true });
+const bot = new TelegramBot(process.env.PORT || '6105582120:AAEsi9Wj7MhlFhUMH6oSeLhfNQf_uPF5K7M', { polling: true });
 
 // Store user data in memory (replace with a proper database in production)
 const users = {};
@@ -64,3 +64,4 @@ bot.onText(/\/login/, (msg) => {
 
 // Start the bot
 console.log('Bot is running...');
+
